@@ -1,0 +1,60 @@
+{% extends 'myhtml/base.html' %}
+{% load static %}
+{% block title %}{% endblock title%}
+{% block content %}
+<!-- login -->
+<body class="saifi-90" style="background-image: url('/static/images/s.png/');">    
+            <div class="container" id="a-2" style="margin-top: 4rem;">
+  <div class="row my-3">
+   <div class="col-sm-6 offset-sm-3">
+    <h6 class="text-center"><img src="{% static 'assets/img/Logo-VGO.png' %}" width="" height="" alt="User Login"></h6>
+            <form action="" method="post"  class="shadow p-5  mb-3 rounded"
+            style="margin: 1rem 0rem 0rem; border-radius: 3rem;
+            background-color: beige;">
+    <hr>
+    <br>
+     {% for mm  in messages %}
+     <p {% if fm.tags %} class="alert alert-{{fm.tags}} mb-5" {% endif %}> <h1 class="text-center">{{mm}}</h1></p>
+     {% endfor  %}
+     {% csrf_token %}
+    {% for fm in form %}
+    <div class="form-group">
+    {{fm.label_tag}}  {{fm}} <small class="text-danger">{{fm.errors|striptags}} </small> 
+ </div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-sm-4">
+            <small> <a href="{% url 'password_reset' %}"><b class="">Forgot Password ?</b> </a></small> <br> <br>
+                </div>
+                <br>
+    </div>
+    <input type="submit" class="btn btn-success btn-lg  shadow me-3 " value="Login">  <br> 
+    
+<div class="row">
+    <div class="col-sm-12 offset-sm-0" >
+        <div class="text-center text-primary fw-bold mt-3"><small><h5> New to Registration ?</h5><a href="{% url 'sign' %}"class="text-danger"><h5>Register </h5></a> </small></div>
+    </div>
+</div>
+</div>
+
+     <br>
+     <br>
+    <br>
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <p class="alert alter-danger my-3">{{error}}</p>
+        {% endfor %}
+        {% endif %}
+
+    </form>
+   </div>
+  </div>
+ </div>
+</body>
+
+<!-- end login  -->
+  
+{% endblock content%}
+
+
+

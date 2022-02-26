@@ -1,0 +1,50 @@
+{% extends 'myhtml/base.html' %}
+{% load static %}
+{% block title %}{% endblock title%}
+{% block content %}
+<!-- login -->
+<body class="saifi-90" style="background-image: url('/static/images/1.png/');">    
+    <div class="container" id="a-2" style="margin-top: 1rem;">
+<div class="row my-3">
+<div class="col-sm-6 offset-sm-3">
+<h6 class="text-center"><img src="{% static 'assets/img/Logo-VGO.png' %}" width="200" height="50" alt="User Login"></h6>
+    <form action="" method="post"  class="shadow p-5  mb-3 rounded"
+    style="margin: 1rem 0rem 0rem; border-radius: 3rem;
+    background-color: beige;">
+<hr>
+<br>
+{% for mm  in messages %}
+<p {% if fm.tags %} class="alert alert-{{fm.tags}} mb-5" {% endif %}> 
+    <h1 class="text-center">{{mm}}</h1>
+</p>
+{% endfor  %}
+{% csrf_token %}
+{% for fm in form %}
+<div class="form-group">
+{{fm.label_tag}}  {{fm}} <small class="text-danger">{{fm.errors|striptags}} </small> 
+</div>
+{% endfor %}
+<input type="submit" class="btn btn-success btn-lg  shadow me-3 " value="Submit">  <br> 
+
+
+</form>
+</div>
+</div>
+</div>
+
+
+</body>
+
+
+<!-- end login  -->
+  
+
+
+
+
+<!-- end login  -->
+  
+{% endblock content%}
+
+
+

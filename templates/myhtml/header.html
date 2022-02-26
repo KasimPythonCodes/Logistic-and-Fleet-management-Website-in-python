@@ -1,0 +1,146 @@
+{% load static %}
+{% block title %}{% endblock title%}
+{% block content %}
+<!-- mycode -->
+<style> 
+    .move-to-car-in-python{
+      width: 100px;
+      height: 40px;
+      position: relative;
+      animation-name: example;
+      animation-duration: 10s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+    }
+    
+    @keyframes example {
+      /* 0%   {background:u; left:0px; top:0px;}
+      25%  {background-color:i; left:200px; top:0px;} */
+      from {left:0px; top:0px}
+          to {left:200px; top:0px;}
+        }
+     
+    
+    </style>
+<header>
+    <div class="header-output padding-tb-10px background-white">
+        <div class="container header-in">
+            <div class="position-relative">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <a id="logo" href="/home-vgo-web.html" class="d-inline-block margin-tb-15px"><img src="{% static 'assets/img/Logo-VGO.png' %}" alt=""></a>
+                        <a class="mobile-toggle padding-15px background-second-color border-radius-3" href="#"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div class="col-lg-9 col-md-12 d-none d-lg-block position-inherit">
+                        <div class="row">
+
+                            <!-- contact info -->
+                            <div class="col-lg-4 padding-tb-15px">
+                                <div class="contact-info opacity-9">
+                                    <div class="icon margin-top-5px"><span class="icon_pin_alt"></span></div>
+                                    <div class="text">
+                                        <span class="title-in">Location :</span> <br>
+                                        <span class="font-weight-500 text-uppercase text-main-color">Sector24, Rohini-New Delhi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- // contact info -->
+
+
+                            <!-- contact info -->
+                            <div class="col-lg-4 padding-tb-15px">
+                                <div class="contact-info opacity-9">
+                                    <div class="icon margin-top-5px"><span class="icon_mail_alt"></span></div>
+                                    <div class="text">
+                                        <span class="title-in">Email :	</span> <br>
+                                        <span class="font-weight-500 text-lowercase text-main-color">support@vgorides.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // contact info -->
+
+
+                            <!-- contact info -->
+                            <div class="col-lg-4 padding-tb-15px">
+                                <div class="contact-info opacity-9">
+                                    <div class="icon margin-top-5px">
+                                        <img class="move-to-car-in-python"
+                                        src="https://cdn4.iconfinder.com/data/icons/proglyphs-traveling/512/Delivery-256.png"
+                                         width="40" height="40" alt="kasim saifi Django Developer">
+                                            </span></div>
+                                            <div class="text">
+                                                <span class="title-in">Pick Us:</span> <br>
+                                                <span class="font-weight-300 text-uppercase text-main-color">
+                                                        <a data-toggle="" data-target=".bd-example-modal-lg"
+                                                         href="/pick" class="btn btn-sm border-radius-30 margin-tb-12px text-white  
+                                                         background-dark  box-shadow float-right padding-lr-20px margin-left-100px d-block">
+                                                      <i class="bi bi-envelope"></i>  Get A PICK ORDER
+                                                    </a>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // contact info -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="background-main-color clearfix">
+        <div class="container">
+            <div class="position-relative">
+                <div class="row">
+                    <div class="col-lg-4 position-inherit">
+                        <ul id="menu-main" class="nav-menu float-lg-left text-lg-left link-padding-tb-16px white-link dropdown-dark">
+                            <li><a href="/home-vgo-web.html">Home</a></li>
+                            <li class="has-dropdown"><a href="###VGO##">Company</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/about-us-vgo">About Us</a></li>
+                                    <li><a href="/Faqs">Faqs</a></li>
+                                    <li><a href="/Our-Team">Our Team</a></li>
+                                    <li><a href="/contact-us">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown"><a href="###########">Services</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/tranpost">Transport Management</a></li>
+                                    <li><a href="/logistic">Logistics Solution</a></li>
+                                    <li><a href="/fleet">Fleet Management</a></li>
+                                </ul>
+                            </li>
+                            <li> <a href="/blog">Blog</a>
+                            </li>
+                            
+                        </ul>
+                            
+                    </div>
+
+                    <div class="col-lg-3 col-md-12  d-none d-lg-block">
+                        <!-- <a data-toggle="modal" data-target=".bd-example-modal-lg" href="#" class="btn btn-sm border-radius-30 margin-tb-12px text-white  background-dark  box-shadow float-right padding-lr-20px margin-left-30px d-block">
+                      <i class="fa fa-envelope-o"></i>  Get A Quote
+                    </a> -->
+                </div>
+                    <div class="col-lg-2 col-md-12  d-none d-lg-block" style="margin-top: 1rem;">
+                       {% if request.user.is_authenticated %}
+                       <a href="{% url 'logout' %}"> &nbsp;&nbsp;&nbsp; Logout</a>
+                       {% else %}
+                        <a href="{% url 'login' %}"> &nbsp;&nbsp;&nbsp; Login</a>
+                       <a href="{% url 'sign' %}">&nbsp;&nbsp;&nbsp;SignUp</a>
+                      {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% load static %}
+{% block title %}{% endblock title%}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+     @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+    </style>
+  
+</head>
+<body class="body-33"> 
+   
+<style>
+    .layout-light{
+        background-color: coral;
+        padding-top:4rem;
+        padding-bottom:4rem;
+
+    }
+</style>
+<br>
+<br>
+<br>
+<div class="container-fluid mt-5" style="padding-bottom: 20px;">
+<footer class="layout-light">
+    <div class="container padding-tb-100px">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="about-us sm-mb-45px">
+                    <div class="logo-footer margin-bottom-35px">
+                        <a href="#"><img src="{% static 'assets/img/Logo-VGO.png' %}" alt=""></a>
+                    </div>
+                    <div class="text margin-bottom-35px">
+                        VGO, One of the leading logistics and fleet management companies in India and optimized logistics chain and transportation system. We reduce the communication gap between drivers and Industries using cutting edge technology.
+                    </div>
+                    <a href="#" class="nile-bottom sm">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="nile-widget widget_nav_menu sm-mb-45px">
+                    <h2 class="title">Our Services</h2>
+                    <ul class="footer-menu">
+                        <li><a href="/tranpost">Transport Management</a></li>
+                        <li><a href="/logistic">Logistics Solution</a></li>
+                        <li><a href="/fleet">Fleet Management</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+                <div class="nile-widget widget_nav_menu sm-mb-45px">
+                    <h2 class="title">Site Pages</h2>
+                    <ul class="footer-menu">
+                        <li><a href="/home-vgo-web.html">Home </a></li>
+                            <li><a href="/home-vgo-web.html">Company </a></li>
+                            <li><a href="#">Services </a></li>
+                            <li><a href="/privacy-&-policy.html">Privacy & policy</a></li>
+                            <li><a href="/term-&-condition.html">Term & Condition</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+                <div class="nile-widget widget_nav_menu sm-mb-45px">
+                    <h2 class="title">Location</h2>
+                    <ul class="footer-menu">
+                        <li><a href="#">Delhi </a></li>
+                        <li><a href="#">Kolkata</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                        <li><a href="#">Jaipur </a></li>
+                        <li><a href="#">Punjab </a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="container padding-tb-50px">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copy-right-text text-lg-left text-center sm-mb-15px"><a target="_blank" href= ></a> </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--  Social -->
+                    <ul class="social-media list-inline text-lg-right text-center margin-0px text-dark">
+                        <li class="list-inline-item"><a class="facebook" href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a class="youtube" href="#"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a class="linkedin" href="#"><i class="bi bi-linkedin"></i></i></a></li>
+                        <li class="list-inline-item"><a class="twitter" href="#"><i class="bi bi-twitter"></i></a></li>
+                        <li class="list-inline-item"><a class="rss" href="#"><i class="bi bi-rss" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a class="google" href="#"><i class="bi bi-google" aria-hidden="true"></i></a></li>
+
+                    <!-- // Social -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</div>
+
+</body>
+
+{% endblock %}
