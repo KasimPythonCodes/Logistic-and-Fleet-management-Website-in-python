@@ -9,6 +9,8 @@ urlpatterns = [
     
 
     path('pick/', User_Pickup.as_view(),name='pick'),
+    path('', home14,name='home'),
+
     path('privacy-&-policy.html/', privacy,name='privacy'),
 
 
@@ -16,14 +18,14 @@ urlpatterns = [
     
 
     #models views end
-    path('home-vgo-web.html/',  home1),
+    path('vgo-web.html/',  home1),
     path('success.html/',  success),
 
     path('term-&-condition.html/',  Term),
 
     # path('a/', home2),
     # path('b/', home3),
-    path('blog/', home4),
+    path('vgo-blog/', home4),
     path('about-us-vgo/', home5),
     path('contact-us/', home6),
     path('Faqs/', home7),
@@ -31,7 +33,7 @@ urlpatterns = [
     path('tranpost/', home9),
     # path('i/', home10),
     path('Our-Team/', home11),
-    path('fleet/', home12),
+    path('fleet_management/', home12),
     path('logistic/', home13),
 
     

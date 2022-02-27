@@ -94,3 +94,5 @@ def home12(request):
 def home13(request):
     return render(request, 'logistics.html')    
 
+def home14(request):
+    return render(request, 'index.html')  
