@@ -66,7 +66,7 @@ class Select_Goods(models.Model):
 
 
     def __str__(self):
-        return str(self.mobile)
+        return str(self.truck_type)
 
 # STATE_CHOICES=(
 #     ('Andaman & Nicobar Islands','Andaman & Nicobar Islands'),
